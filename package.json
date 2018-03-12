@@ -9,6 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "prehmr": "ng set warnings.hmrWarning=false",
     "hmr": "ng serve --hmr -e=hmr"
   },
   "private": true,
