@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor() { }
+
+  onDrop(evt) {
+    console.log('Drop!', evt);
+  }
+
+  onDragOver(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+  }
 }

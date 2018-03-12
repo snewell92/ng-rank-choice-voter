@@ -1,10 +1,29 @@
-<div style="text-align:center">
-  <h1>Cast your Vote!</h1>
-</div>
-<p>
-  Drag your choice over and order your votes!
-</p>
-<div>
-  <voting></voting>
-</div>
+<mat-toolbar color=primary>
+  <span>Rank Choice Voting | Dev Talk Topics</span>
+</mat-toolbar>
 
+<section class="mat-typography app-content-container">
+  <div class="intro">
+    <h1>Cast your Vote!</h1>
+    <p>
+      Drag your choice over and order your votes!
+    </p>
+  </div>
+  <mat-grid-list cols="3" rowHeight="3:1">
+    <mat-grid-tile class="vote" colspan="2">
+      <mat-list (drop)="onDrop($event)" (dragover)="onDragOver($event)" >
+
+      </mat-list>
+    </mat-grid-tile>
+    <mat-grid-tile class="choices">
+      <mat-list role="list">
+        <mat-list-item draggable="true" role="listitem">
+          <p>Fire</p>
+        </mat-list-item>
+        <mat-list-item draggable="true" role="listitem">
+          <p>Ice</p>
+        </mat-list-item>
+      </mat-list>
+    </mat-grid-tile>
+  </mat-grid-list>
+</section>
