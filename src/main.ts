@@ -9,8 +9,7 @@ if (environment.production) {
   enableProdMode();
 }
 
-// TODO not sure why types fail here
-const bootstrap = platformBrowserDynamic().bootstrapModule(AppModule) as any;
+const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
 
 if (environment.hmr) {
   if (module[ 'hot' ]) {
