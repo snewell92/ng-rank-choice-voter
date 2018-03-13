@@ -60,6 +60,7 @@
     }
   },
   "warnings": {
-    "hmrWarning": false
+    "hmrWarning": false,
+    "typescriptMismatch": false
   }
 }
